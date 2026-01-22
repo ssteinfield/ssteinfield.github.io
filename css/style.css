@@ -27,33 +27,29 @@ section {
 /* Project container */
 .project {
   display: flex;
-  gap: 1rem;          /* space between images and text */
-  margin-bottom: 2rem;
-  flex-wrap: wrap;     /* wrap on small screens */
-  align-items: flex-start; /* prevents images from stretching vertically */
+  flex-direction: column;  /* stack description above images */
+  gap: 1rem;               /* space between description and images */
+  margin-bottom: 3rem;
 }
 
-/* Image container for multiple images */
+.project-info {
+  max-width: 900px;        /* same width as section */
+  margin: auto;
+}
+
 .project-images {
   display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
+  gap: 1rem;
+  max-width: 900px;        /* same width as description */
+  margin: auto;
 }
 
-/* Images: maintain aspect ratio and consistent sizing */
 .project-images img {
-  height: 150px;       /* fixed height */
-  width: auto;         /* width adjusts automatically */
-  object-fit: contain; /* preserves aspect ratio, no stretching */
+  flex: 1;                 /* each image takes half the width */
+  height: auto;            /* maintain aspect ratio */
+  object-fit: cover;       /* fill the space without stretching */
   border: 1px solid #ccc;
 }
-
-/* Project text / info */
-.project-info {
-  flex: 1;            /* take remaining space next to images */
-  min-width: 250px;   /* prevent shrinking too much on small screens */
-}
-
 /* Footer */
 footer {
   text-align: center;
