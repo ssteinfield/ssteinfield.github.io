@@ -15,31 +15,52 @@
   <section id="projects">
     <h2>Projects</h2>
 
-    <!-- <div class="project">
-      <img src="images/negative_refraction.png" alt="Negative Refraction">
-      <div>
-        <h3>Negative Refraction in NIMs</h3>
-        <p>Visualized optical phenomena using Mitsuba 3 and physically-based rendering techniques.</p>
-        <a href="https://github.com/ssteinfield/NIM_project" target="_blank">GitHub</a>
-      </div>
-    </div> -->
-
-    <div class="project">
-      <img src="images/caustics.png" alt="Caustics">
-      <div>
-        <h3>Caustics & Total Internal Reflection</h3>
-        <p>Simulated light propagation and caustics for different refractive materials.</p>
-        <a href="https://github.com/ssteinfield/Caustics_project" target="_blank">GitHub</a>
-      </div>
+ <!-- C++ Path Tracer -->
+  <div class="project">
+    <img src="images/cpp_path_tracer.png" alt="C++ Path Tracer">
+    <div>
+      <h3>C++ Path Tracer</h3>
+      <ul>
+        <li>Physically based Monte Carlo path tracer using Object-Oriented Design, featuring global illumination, multiple importance sampling (MIS), and next event estimation (NEE).</li>
+        <li>Extensible material and geometry system using C++ polymorphism with a BVH acceleration structure for efficient ray-primitive intersection.</li>
+      </ul>
+      <!-- <a href="https://github.com/ssteinfield/CppPathTracer" target="_blank">GitHub</a> -->
     </div>
+  </div>
+
+  <!-- CUDA Path Tracer -->
+  <div class="project">
+    <img src="images/cuda_path_tracer.png" alt="CUDA Path Tracer">
+    <div>
+      <h3>CUDA Path Tracer (C++ / CUDA)</h3>
+      <ul>
+        <li>Engineered a GPGPU path tracer using the SIMT execution model, achieving a 50x increase in rays-per-second compared to previous multithreaded CPU implementation.</li>
+        <li>Designed 16-byte-aligned structures and SoA memory layouts for coalesced memory access.</li>
+        <li>Packed complex geometry and material data into contiguous GPU buffers to reduce host-to-device transfer overhead and kernel latency.</li>
+      </ul>
+      <!-- <a href="https://github.com/ssteinfield/CudaPathTracer" target="_blank">GitHub</a> -->
+    </div>
+  </div>
+
+  <!-- Custom BSDF Plugin -->
+  <div class="project">
+    <img src="images/bsdf_plugin.png" alt="Custom BSDF Plugin">
+    <div>
+      <h3>Custom BSDF Plugin – Mitsuba 3 (C++)</h3>
+      <ul>
+        <li>Developed advanced material interfaces to enable atypical light propagation and visual distortion.</li>
+        <li>Integrated seamlessly into the Mitsuba 3 rendering pipeline for research and experimentation.</li>
+      </ul>
+      <!-- <a href="https://github.com/ssteinfield/MitsubaBSDFPlugin" target="_blank">GitHub</a> -->
+    </div>
+  </div>
 
     <!-- Add more projects here -->
   </section>
 
   <section id="about">
     <h2>About</h2>
-    <p>Hi! I’m Scott, a rendering researcher at the University of Waterloo.</p>
-    <img src="images/uw_logo1.jpg" alt="University of Waterloo" style="width:100px;">
+    <p>Hi! I’m Scott, a rendering researcher at the University of Waterloo.  <img src="images/uw_logo1.jpg" alt="University of Waterloo" style="width:100px;"></p>
   </section>
 
   <footer>

@@ -44,3 +44,26 @@ footer {
   padding: 1rem;
   background: #eee;
 }
+.project {
+  display: flex;
+  gap: 1rem; /* space between images and text */
+  margin-bottom: 2rem;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.project-images {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.project-images img {
+  width: 150px; /* adjust size as needed */
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.project-info {
+  flex: 1; /* take remaining space */
+  min-width: 250px; /* ensures it doesn’t shrink too small */
+}
