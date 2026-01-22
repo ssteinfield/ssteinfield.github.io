@@ -1,3 +1,4 @@
+/* General styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -23,47 +24,39 @@ section {
   margin: auto;
 }
 
+/* Project container */
 .project {
   display: flex;
-  gap: 1rem;
+  gap: 1rem;          /* space between images and text */
   margin-bottom: 2rem;
+  flex-wrap: wrap;     /* wrap on small screens */
+  align-items: flex-start; /* prevents images from stretching vertically */
 }
 
-.project img {
-  width: 200px;
-  height: auto;
-  border: 1px solid #ccc;
-}
-
-.project div {
-  flex: 1;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eee;
-}
-.project {
-  display: flex;
-  gap: 1rem; /* space between images and text */
-  margin-bottom: 2rem;
-  flex-wrap: wrap; /* allows wrapping on small screens */
-}
-
+/* Image container for multiple images */
 .project-images {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
 }
 
+/* Images: maintain aspect ratio and consistent sizing */
 .project-images img {
-  width: 150px; /* adjust size as needed */
-  height: auto;
+  height: 150px;       /* fixed height */
+  width: auto;         /* width adjusts automatically */
+  object-fit: contain; /* preserves aspect ratio, no stretching */
   border: 1px solid #ccc;
 }
 
+/* Project text / info */
 .project-info {
-  flex: 1; /* take remaining space */
-  min-width: 250px; /* ensures it doesn’t shrink too small */
+  flex: 1;            /* take remaining space next to images */
+  min-width: 250px;   /* prevent shrinking too much on small screens */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
 }
