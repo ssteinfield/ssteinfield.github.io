@@ -3,70 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scott Steinfield | Portfolio</title>
+  <title>Scott Steinfield</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Scott Steinfield</h1>
-    <p>Rendering researcher | Physically-based simulation | Optical phenomena</p>
-  </header>
 
-  <section id="projects">
-    <h2>Projects</h2>
+<header>
+  <h1>Scott Steinfield</h1>
+  <p>Physically Based Rendering · Optical Phenomena · GPU Rendering</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#skills">Skills</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<div class="project">
-  <div class="project-images">
-    <img src="images/CPU_PT_1.png" alt="C++ Path Tracer">
-    <img src="images/CPU_PT_2.png" alt="C++ Path Tracer Example 2">
+<section id="about">
+  <h2>About</h2>
+  <p>
+    I am a researcher focused on physically based rendering, light transport, and optical phenomena,
+    with a particular interest in negative-index materials and GPU-accelerated simulation. My work 
+    involves creating advanced rendering systems and experimenting with novel light propagation effects.
+  </p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <!-- C++ Path Tracer -->
+  <div class="project">
+    <div class="project-info">
+      <h3>C++ Path Tracer</h3>
+      <ul>
+        <li>Physically based Monte Carlo path tracer built using Object-Oriented Design, featuring global illumination, multiple importance sampling (MIS), and next event estimation (NEE).</li>
+        <li>Implemented an extensible material and geometry system using C++ polymorphism, alongside a BVH acceleration structure for efficient ray-primitive intersection.</li>
+      </ul>
+    </div>
+    <div class="project-images">
+      <img src="images/cpp_path_tracer.png" alt="C++ Path Tracer Render 1">
+      <img src="images/cpp_path_tracer_2.png" alt="C++ Path Tracer Render 2">
+    </div>
   </div>
-  <div class="project-info">
-    <h3>C++ Path Tracer</h3>
-    <ul>
-      <li>Physically based Monte Carlo path tracer using Object-Oriented Design, featuring global illumination, multiple importance sampling (MIS), and next event estimation (NEE).</li>
-      <li>Extensible material and geometry system using C++ polymorphism with a BVH acceleration structure for efficient ray-primitive intersection.</li>
-    </ul>
-    <!-- <a href="https://github.com/ssteinfield/CppPathTracer" target="_blank">GitHub</a> -->
-  </div>
-</div>
 
   <!-- CUDA Path Tracer -->
   <div class="project">
-    <img src="images/cuda_path_tracer.png" alt="CUDA Path Tracer">
-    <div>
+    <div class="project-info">
       <h3>CUDA Path Tracer (C++ / CUDA)</h3>
       <ul>
         <li>Engineered a GPGPU path tracer using the SIMT execution model, achieving a 50x increase in rays-per-second compared to previous multithreaded CPU implementation.</li>
         <li>Designed 16-byte-aligned structures and SoA memory layouts for coalesced memory access.</li>
         <li>Packed complex geometry and material data into contiguous GPU buffers to reduce host-to-device transfer overhead and kernel latency.</li>
       </ul>
-      <!-- <a href="https://github.com/ssteinfield/CudaPathTracer" target="_blank">GitHub</a> -->
+    </div>
+    <div class="project-images">
+      <img src="images/cuda_path_tracer.png" alt="CUDA Path Tracer Render 1">
+      <img src="images/cuda_path_tracer_2.png" alt="CUDA Path Tracer Render 2">
     </div>
   </div>
 
   <!-- Custom BSDF Plugin -->
   <div class="project">
-    <img src="images/bsdf_plugin.png" alt="Custom BSDF Plugin">
-    <div>
+    <div class="project-info">
       <h3>Custom BSDF Plugin – Mitsuba 3 (C++)</h3>
       <ul>
-        <li>Developed advanced material interfaces to enable atypical light propagation and visual distortion.</li>
-        <li>Integrated seamlessly into the Mitsuba 3 rendering pipeline for research and experimentation.</li>
+        <li>Developed advanced material interfaces to enable atypical light propagation and visual distortion, integrating seamlessly into the Mitsuba 3 rendering pipeline.</li>
       </ul>
-      <!-- <a href="https://github.com/ssteinfield/MitsubaBSDFPlugin" target="_blank">GitHub</a> -->
+    </div>
+    <div class="project-images">
+      <img src="images/mitsuba_bsdf.png" alt="Custom BSDF Plugin Render">
+      <img src="images/mitsuba_bsdf_2.png" alt="Custom BSDF Plugin Render 2">
     </div>
   </div>
+</section>
 
-    <!-- Add more projects here -->
-  </section>
+<section id="research">
+  <h2>Research Interests</h2>
+  <ul>
+    <li>Physically based rendering</li>
+    <li>Negative-index materials and exotic optical phenomena</li>
+    <li>Monte Carlo light transport</li>
+    <li>GPU path tracing (CUDA)</li>
+    <li>Visual perception and rendering illusions</li>
+  </ul>
+</section>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>Hi! I’m Scott, a rendering researcher at the University of Waterloo.  <img src="images/uw_logo1.jpg" alt="University of Waterloo" style="width:100px;"></p>
-  </section>
+<section id="gallery">
+  <h2>Visual Gallery</h2>
+  <p>Placeholder for additional renderings or optical phenomena images.</p>
+  <div class="project-images">
+    <img src="images/gallery_1.png" alt="Gallery Render 1">
+    <img src="images/gallery_2.png" alt="Gallery Render 2">
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2026 Scott Steinfield</p>
-  </footer>
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li><strong>Languages:</strong> C++, CUDA, Python, Lua</li>
+    <li><strong>Rendering:</strong> Path tracing, MIS, NEE, BSDFs</li>
+    <li><strong>Tools:</strong> Mitsuba 3, Blender, OpenEXR</li>
+    <li><strong>Systems:</strong> GPU memory layouts, multithreading, BVH acceleration</li>
+  </ul>
+</section>
+
+<section id="cv">
+  <h2>CV</h2>
+  <p>
+    <a href="files/Scott_Steinfield_CV.pdf" target="_blank">Download CV (PDF)</a>
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
+  <p>GitHub: <a href="https://github.com/ssteinfield" target="_blank">ssteinfield</a></p>
+  <!-- Optional: LinkedIn -->
+  <!-- <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p> -->
+</section>
+
+<footer>
+  <p>© 2026 Scott Steinfield</p>
+</footer>
+
 </body>
 </html>
