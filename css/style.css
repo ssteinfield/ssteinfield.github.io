@@ -1,4 +1,6 @@
-/* General styles */
+/* =========================
+   General styles
+   ========================= */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,6 +9,9 @@ body {
   color: #333;
 }
 
+/* =========================
+   Header
+   ========================= */
 header {
   background: #0a74da;
   color: white;
@@ -18,39 +23,60 @@ header h1 {
   margin: 0;
 }
 
+/* =========================
+   Section layout
+   ========================= */
 section {
-  padding: 2rem;
   max-width: 900px;
   margin: auto;
+  padding: 2rem;
 }
 
-/* Project container */
+/* =========================
+   Projects
+   ========================= */
 .project {
-  display: flex;
-  flex-direction: column;  /* stack description above images */
-  gap: 1rem;               /* space between description and images */
   margin-bottom: 3rem;
 }
 
+/* Text block (inherits section width) */
 .project-info {
-  max-width: 900px;        /* same width as section */
-  margin: auto;
+  width: 100%;
 }
 
+/* Image row — same width as text */
 .project-images {
   display: flex;
   gap: 1rem;
-  max-width: 900px;        /* same width as description */
-  margin: auto;
+  width: 100%;
+  margin-top: 1rem;
 }
 
+/* Two images, each half the text width */
 .project-images img {
-  flex: 1;                 /* each image takes half the width */
-  height: auto;            /* maintain aspect ratio */
-  object-fit: cover;       /* fill the space without stretching */
+  width: calc(50% - 0.5rem);
+  height: auto;
+  display: block;
+  object-fit: contain;
   border: 1px solid #ccc;
 }
-/* Footer */
+
+/* =========================
+   Responsive (mobile)
+   ========================= */
+@media (max-width: 700px) {
+  .project-images {
+    flex-direction: column;
+  }
+
+  .project-images img {
+    width: 100%;
+  }
+}
+
+/* =========================
+   Footer
+   ========================= */
 footer {
   text-align: center;
   padding: 1rem;
