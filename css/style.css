@@ -10,19 +10,37 @@ body {
   color: #e5e7eb;
 }
 
-/* =========================
-   Header
-   ========================= */
+/* Header layout */
 header {
   background: linear-gradient(90deg, #1e293b, #020617);
   color: #ffffff;
-  padding: 2.5rem 1rem;
+  padding: 1.5rem 1rem;  /* reduced top/bottom padding */
   text-align: center;
 }
 
-header h1 {
+/* Remove default margins from header elements */
+header h1,
+header p,
+header nav {
   margin: 0;
+  padding: 0;
 }
+
+/* Navigation links spacing */
+header nav {
+  margin-top: 0.5rem;  /* small gap between description and nav */
+}
+
+header nav a {
+  margin: 0 0.5rem;    /* spacing between links */
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #93c5fd;
+}
+
 
 /* =========================
    Sections (panels) with full soft purple accent
@@ -76,6 +94,12 @@ section li {
   display: block;
 }
 
+.project-images img:hover {
+  /* transform: scale(1.03);
+  transition: transform 0.3s ease; */
+  border-color: #a78bfa; /* soft purple highlight */
+}
+
 /* =========================
    Links
    ========================= */
@@ -115,13 +139,38 @@ footer {
   color: #cbd5f5;
 }
 
-#resume a {
-  color: #c084fc; /* soft purple for links to match panel accents */
-  font-weight: bold;
-  text-decoration: none;
+
+.uw-logo {
+  text-align: center;
+  margin: 0;       /* remove all top/bottom margins */
+  padding: 0;      /* remove padding */
 }
 
-#resume a:hover {
-  color: #d8b4fe;
-  text-decoration: underline;
+.uw-logo img {
+  height: 175px;   /* adjust if needed */
+  width: auto;
+  display: inline-block;
+}
+
+/* Remove underline from all links */
+a {
+  color: #60a5fa;       /* your existing link color */
+  text-decoration: none; /* no underline */
+}
+
+/* Optional: add hover color effect */
+a:hover {
+  color: #93c5fd;       /* slightly lighter on hover */
+  text-decoration: none; /* still no underline */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.skill-bar {
+  display:inline-block;
+  height:8px;
+  background:#7c3aed;
+  border-radius:4px;
 }
