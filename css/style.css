@@ -114,3 +114,14 @@ footer {
   background: #020617;
   color: #cbd5f5;
 }
+
+#resume a {
+  color: #c084fc; /* soft purple for links to match panel accents */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#resume a:hover {
+  color: #d8b4fe;
+  text-decoration: underline;
+}
