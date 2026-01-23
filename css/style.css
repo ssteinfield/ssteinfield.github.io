@@ -33,6 +33,16 @@ section {
 }
 
 /* =========================
+   Text justification (desktop)
+   ========================= */
+section p,
+section li {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* =========================
    Projects
    ========================= */
 .project {
@@ -65,6 +75,13 @@ section {
    Responsive (mobile)
    ========================= */
 @media (max-width: 700px) {
+
+  /* Disable justification on small screens */
+  section p,
+  section li {
+    text-align: left;
+  }
+
   .project-images {
     flex-direction: column;
   }
