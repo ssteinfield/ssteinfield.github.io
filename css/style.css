@@ -1,21 +1,22 @@
 /* =========================
-   General styles
+   Global (Dark Theme)
    ========================= */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  color: #333;
+  background-color: #0f172a; /* dark navy */
+  color: #e5e7eb;
 }
 
 /* =========================
    Header
    ========================= */
 header {
-  background: #0a74da;
-  color: white;
-  padding: 2rem;
+  background: linear-gradient(90deg, #1e293b, #020617);
+  color: #ffffff;
+  padding: 2.5rem 1rem;
   text-align: center;
 }
 
@@ -24,21 +25,27 @@ header h1 {
 }
 
 /* =========================
-   Section layout
+   Sections (panels) with full soft purple accent
    ========================= */
 section {
   max-width: 900px;
-  margin: auto;
+  margin: 2rem auto;
   padding: 2rem;
+  background-color: #111827;
+  border-left: 6px solid #a78bfa;   /* soft purple */
+  border-right: 6px solid #a78bfa;  /* soft purple */
+  border-radius: 6px;
+
+  /* subtle polished shadow/glow */
+  box-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
 }
 
 /* =========================
-   Text justification (desktop)
+   Text (justified)
    ========================= */
 section p,
 section li {
   text-align: justify;
-  text-justify: inter-word;
   hyphens: auto;
 }
 
@@ -47,36 +54,43 @@ section li {
    ========================= */
 .project {
   margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #334155;
 }
 
-/* Text block (inherits section width) */
 .project-info {
   width: 100%;
 }
 
-/* Image row — same width as text */
 .project-images {
   display: flex;
   gap: 1rem;
-  width: 100%;
   margin-top: 1rem;
 }
 
-/* Two images, each half the text width */
 .project-images img {
   width: calc(50% - 0.5rem);
-  height: auto;
-  display: block;
+  background: #020617;
+  border: 1px solid #475569;
   object-fit: contain;
-  border: 1px solid #ccc;
+  display: block;
 }
 
 /* =========================
-   Responsive (mobile)
+   Links
+   ========================= */
+a {
+  color: #60a5fa;
+}
+
+a:hover {
+  color: #93c5fd;
+}
+
+/* =========================
+   Mobile
    ========================= */
 @media (max-width: 700px) {
-
-  /* Disable justification on small screens */
   section p,
   section li {
     text-align: left;
@@ -97,5 +111,6 @@ section li {
 footer {
   text-align: center;
   padding: 1rem;
-  background: #eee;
+  background: #020617;
+  color: #cbd5f5;
 }
