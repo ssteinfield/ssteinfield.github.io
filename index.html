@@ -43,10 +43,10 @@
  
 
 <section id="about">
-  <div class="project-images">
-  <img src="images/GPU_PT_1.png" alt="C++ Path Tracer Render 1">
-  <img src="images/GPU_PT_2.png" alt="C++ Path Tracer Render 2">
-</div>
+  <!-- <div class="project-images">
+  <img src="images/SW.png" alt="C++ Path Tracer Render 1">
+  <img src="images/sphere_render.png" alt="C++ Path Tracer Render 2"> 
+</div> -->
   <h2>About</h2>
   <p>
     I am a researcher focused on physically based rendering, light transport, and optical phenomena. My work 
@@ -64,19 +64,21 @@
 <section id="projects">
   <h2>Projects</h2>
 
-  <!-- C++ Path Tracer -->
-  <div class="project">
+    <div class="project">
     <div class="project-info">
-      <h3>C++ Path Tracer</h3>
+      <h3>Custom BSDF Plugin – Mitsuba 3 (C++)</h3>
       <ul>
-        <li>Physically based Monte Carlo path tracer built using Object-Oriented Design, featuring global illumination, multiple importance sampling (MIS), and next event estimation (NEE).</li>
-        <li>Implemented an extensible material and geometry system using C++ polymorphism, alongside a BVH acceleration structure for efficient ray-primitive intersection.</li>
+        <li>Developed advanced material interfaces to enable atypical light propagation and visual distortion, integrating seamlessly into the Mitsuba 3 rendering pipeline.</li>
       </ul>
     </div>
-    <!-- <div class="project-images">
-      <img src="images/CPU_PT_2.png" alt="C++ Path Tracer Render 1">
-      <img src="images/CPU_PT_3.png" alt="C++ Path Tracer Render 2">
-    </div> -->
+    <div class="project-images">
+      <img src="images/Pool_water.png" alt="Custom BSDF Plugin Render">
+      <img src="images/Pool_NIM.png" alt="Custom BSDF Plugin Render 2">
+    </div>
+    <div class="project-images">
+      <img src="images/sphere_render.png" alt="Custom BSDF Plugin Render">
+      <img src="images/sphere_n.png" alt="Custom BSDF Plugin Render 2">
+    </div>
   </div>
 
   <!-- CUDA Path Tracer -->
@@ -87,28 +89,33 @@
         <li>Engineered a GPGPU path tracer using the SIMT execution model, achieving a 50x increase in rays-per-second compared to previous multithreaded CPU implementation.</li>
         <li>Designed 16-byte-aligned structures and SoA memory layouts for coalesced memory access.</li>
         <li>Packed complex geometry and material data into contiguous GPU buffers to reduce host-to-device transfer overhead and kernel latency.</li>
+        <li>Achieved a 10× increase in ray throughput compared to the CPU-based path tracer.</li>
+      </ul>
+    </div>
+    <div class="project-images">
+      <img src="images/GPU_PT_1.png" alt="CUDA Path Tracer Render 1">
+      <img src="images/GPU_PT_2.png" alt="CUDA Path Tracer Render 2">
+    </div>
+  </div>
+
+  <!-- C++ Path Tracer -->
+  <div class="project">
+    <div class="project-info">
+      <h3>C++ Path Tracer</h3>
+      <ul>
+        <li>Physically based Monte Carlo path tracer built using Object-Oriented Design, featuring global illumination, multiple importance sampling (MIS), and next event estimation (NEE).</li>
+        <li>Implemented an extensible material and geometry system using C++ polymorphism, alongside a BVH acceleration structure for efficient ray-primitive intersection.</li>
       </ul>
     </div>
     <!-- <div class="project-images">
-      <img src="images/cuda_path_tracer.png" alt="CUDA Path Tracer Render 1">
-      <img src="images/cuda_path_tracer_2.png" alt="CUDA Path Tracer Render 2">
+      <img src="images/CPU_PT_3.png" alt="C++ Path Tracer Render 1">
+      <img src="images/CPU_PT_4.png" alt="C++ Path Tracer Render 2">
     </div> -->
   </div>
 
-  <!-- Custom BSDF Plugin -->
-  <div class="project">
-    <div class="project-info">
-      <h3>Custom BSDF Plugin – Mitsuba 3 (C++)</h3>
-      <ul>
-        <li>Developed advanced material interfaces to enable atypical light propagation and visual distortion, integrating seamlessly into the Mitsuba 3 rendering pipeline.</li>
-      </ul>
-    </div>
-    <!-- <div class="project-images">
-      <img src="images/mitsuba_bsdf.png" alt="Custom BSDF Plugin Render">
-      <img src="images/mitsuba_bsdf_2.png" alt="Custom BSDF Plugin Render 2">
-    </div> -->
-  </div>
+
 </section>
+  <!-- Custom BSDF Plugin -->
 
 <section id="research">
   <h2>Research Interests</h2>
@@ -145,7 +152,7 @@
     <h2>CV</h2>
     <p>
       
-      <a href="docs/SSRESUME.pdf" target="_blank">Resume (PDF)</a>
+      <a href="docs/SSRESUME2.pdf" target="_blank">Resume (PDF)</a>
     </p>
   </div>
 </section>
